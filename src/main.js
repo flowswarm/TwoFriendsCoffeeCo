@@ -345,11 +345,28 @@ function initFooter() {
   }
 }
 
+/* ── Video Autoplay Fix (BFCache / Safari) ── */
+function initVideos() {
+  const videos = document.querySelectorAll('video[autoplay]');
+  const playVideos = () => {
+    videos.forEach(v => {
+      // Force play and ignore potential unhandled promise rejections if user hasn't interacted
+      v.play().catch(() => {});
+    });
+  };
+  window.addEventListener('pageshow', playVideos);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) playVideos();
+  });
+  playVideos();
+}
+
 /* ═══ INIT ═══ */
 async function init() {
   await runLoader();
   initLenis();
   initCursor();
+  initVideos();
   initHeader();
   initNav();
   initScrollProgress();
