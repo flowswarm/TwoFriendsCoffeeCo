@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis is-loading">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two Friends Coffee Co — Mobile Coffee Trailer | Delaware</title>
+  <meta name="description" content="Two BFF's turned Baristas. Your favorite mobile coffee trailer serving house-made syrups and seasonal menus. Delaware & beyond." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+
+  <!-- SVG SPRITE -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-coffee-cup" viewBox="0 0 64 64"><path d="M12 20h32v4a20 20 0 01-20 20h-0a20 20 0 01-20-20v-4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M44 24h6a6 6 0 010 12h-6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 8c0-4 4-4 4 0s4 4 4 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M28 6c0-4 4-4 4 0s4 4 4 0" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/><line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2"/><line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  </svg>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="o-cursor" id="cursor"></div>
+
+  <!-- LOADER -->
+  <div class="o-loader" id="loader">
+    <div class="o-loader_counter" id="loaderCounter">0</div>
+    <div class="o-loader_text">
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">Two</span></span>
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">friends,</span></span>
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">one</span></span>
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">dream,</span></span>
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">a</span></span>
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">whole</span></span>
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">lot</span></span>
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">of</span></span>
+      <span class="o-loader_wordWrapper"><span class="o-loader_word">coffee.</span></span>
+    </div>
+    <div class="o-loader_bar"><div class="o-loader_barFill" id="loaderBar"></div></div>
+  </div>
+
+  <!-- BACKGROUND -->
+  <div class="background" id="bg-layer"></div>
+
+  <!-- HEADER -->
+  <header class="o-header" id="header">
+    <button class="o-header_menuBtn" id="menuBtn" aria-label="Open menu">
+      <svg class="icon -open"><use href="#icon-menu"/></svg>
+      <svg class="icon -close"><use href="#icon-close"/></svg>
+    </button>
+    <a href="/" class="o-header_logo">
+      <svg class="icon"><use href="#icon-coffee-cup"/></svg>
+      <span>Two Friends Coffee Co.</span>
+    </a>
+    <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="o-header_igBtn" aria-label="Instagram">
+      <svg class="icon"><use href="#icon-instagram"/></svg>
+    </a>
+  </header>
+
+  <!-- MENU OVERLAY (Full-Screen) -->
+  <nav class="o-menu" id="menu">
+    <div class="o-menu_overlay" id="menuOverlay"></div>
+    <div class="o-menu_panel">
+      <div class="o-menu_inner">
+        <div>
+          <ul class="o-menu_list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/book.html">Book Us</a></li>
+            <li><a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank">Instagram</a></li>
+          </ul>
+          <div class="o-menu_footer">
+            <p>Delaware & beyond ☕</p>
+            <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank">@twofriendscoffee_co</a>
+          </div>
+        </div>
+        <div class="o-menu_right">
+          <h3>Follow The <em>Journey</em></h3>
+          <p>House-made syrups, seasonal menus, and community love. Follow us on Instagram for pop-up schedules and new menu drops.</p>
+          <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="a-btn -gold">@twofriendscoffee_co</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="a-scrollProgress" id="scrollProgress">
+    <div class="a-scrollProgress_fill" id="scrollFill"></div>
+  </div>
+
+  <!-- PERSISTENT "Event of the Month" CARD (Foudre: Case of the month) -->
+  <div class="o-caseCard" id="caseCard">
+    <img src="/images/cut-for-cause-event.jpg" alt="Cut for a Cause — $23,000 raised for Bree Strong"/>
+    <div class="o-caseCard_info">
+      <span class="o-caseCard_label">Community Spotlight</span>
+      <span class="o-caseCard_title">CUT FOR A CAUSE</span>
+      <span class="o-caseCard_tag">$23K Raised</span>
+    </div>
+    <a href="/book.html" class="o-caseCard_link">Book us</a>
+  </div>
+
+  <!-- SECTION LABEL (Foudre: bottom-left sticky label) -->
+  <div class="o-sectionLabel" id="sectionLabel"><span>HOME</span></div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         0. VIDEO HERO — Immersive loop
+         Background: dark. Full screen video.
+         ═══════════════════════════════════════ -->
+    <section class="f-videoHero" id="video-hero" data-color="#FFF8F0" data-label="HOME">
+      <div class="f-videoHero_media">
+        <video src="/videos/Hero.mp4" autoplay loop muted playsinline></video>
+      </div>
+      <div class="f-videoHero_overlay"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         1. HERO — Clean centered text (Foudre style)
+         Background: cream. Big bold text.
+         ═══════════════════════════════════════ -->
+    <section class="f-hero" id="hero" data-color="#FFF8F0" data-label="THE VIBE">
+      <!-- Background watermark text (Foudre: giant "FOUDRE" behind content) -->
+      <div class="f-hero_watermark" aria-hidden="true">TWO FRIENDS COFFEE CO.</div>
+      <div class="f-hero_content">
+        <h1 class="f-hero_title">
+          <span class="f-hero_line">TWO BFF'S</span>
+          <span class="f-hero_line">TURNED</span>
+          <span class="f-hero_line -accent">BARISTAS.</span>
+        </h1>
+      </div>
+      <!-- Tilted images floating around hero text (Foudre style) -->
+      <div class="f-hero_img -left" style="--speed:0.3"><img src="/images/busiest-day.jpg" alt="Coffee trailer" loading="eager"/></div>
+      <div class="f-hero_img -right" style="--speed:0.2"><img src="/images/brownie-batter-latte.jpg" alt="Latte" loading="eager"/></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         2. MANIFESTO — Video/image that scales up on scroll (Foudre pink section)
+         Background: blush/pink. Center image scales. Bold text left.
+         ═══════════════════════════════════════ -->
+    <section class="f-manifesto" id="manifesto" data-color="#C77D9A" data-label="MANIFESTO">
+      <div class="f-manifesto_layout">
+        <div class="f-manifesto_left">
+          <h2 class="f-bigText">WE ARE<br/>THE <em>BREW.</em></h2>
+          <p class="f-manifesto_quote">"Before the trailer became our reality, we were simply dreaming about what it might look like to build something together."</p>
+        </div>
+        <div class="f-manifesto_center">
+          <div class="f-manifesto_media" id="manifestoMedia">
+            <img src="/images/two-friends-founders.jpg" alt="Kady & Kerry — the two friends behind Two Friends Coffee Co" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         3. ABOUT — Three-column (Foudre "Agency" section)
+         Left: bold text + emojis. Center: tilted image. Right: description.
+         ═══════════════════════════════════════ -->
+    <section class="f-about" id="about" data-color="#FAF7F2" data-label="THE FRIENDS">
+      <div class="f-threeCol">
+        <div class="f-threeCol_left">
+          <div class="f-emojis">☕ 🤍 ✨</div>
+          <h2 class="f-bigText">WE<br/>ELECTRIFY<br/>YOUR <em>MORNINGS,</em></h2>
+        </div>
+        <div class="f-threeCol_center">
+          <div class="f-tiltImg f-tiltImg--video">
+            <video src="/videos/cut-for-cause.mp4" autoplay loop muted playsinline poster="/images/cut-for-cause-event.jpg" alt="Cut for a Cause charity event — Two Friends Coffee serving all day"></video>
+          </div>
+        </div>
+        <div class="f-threeCol_right">
+          <p class="f-about_desc"><strong>Every single person involved created an everlasting impact.</strong></p>
+          <p class="f-about_desc">Kerry and Kady — two nurses, two BFFs, one dream. They drove a trailer home from New York on a borrowed flatbed and turned their love for coffee into Delaware's favorite mobile coffee spot.</p>
+          <p class="f-about_desc">From serving the entire day and donating all proceeds at Cut for a Cause, to fueling blood drives at the Blood Bank of Delmarva — we show up where community matters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         4. SERVICES — Three-column (Foudre "Expertises" section)
+         Left: bold text. Center: tilted image. Right: service pills/tags.
+         ═══════════════════════════════════════ -->
+    <section class="f-services" id="services" data-color="#FAF7F2" data-label="SERVICES">
+      <div class="f-threeCol">
+        <div class="f-threeCol_left">
+          <h2 class="f-bigText">CRAFTED<br/>TO<br/><em>PERFECTION.</em></h2>
+          <p class="f-services_sub">Two Friends Coffee Co is built on three pillars of excellence.</p>
+        </div>
+        <div class="f-threeCol_center">
+          <div class="f-tiltImg f-tiltImg--video">
+            <video src="/videos/pj-fitzpatrick-morning.mp4" autoplay loop muted playsinline poster="/images/pj-fitzpatrick-poster.jpg" alt="Two Friends Coffee at PJ Fitzpatrick corporate morning"></video>
+          </div>
+        </div>
+        <div class="f-threeCol_right">
+          <h3 class="f-services_heading">POP-UP EVENTS</h3>
+          <div class="f-pills">
+            <span class="f-pill">Markets & Fairs</span>
+            <span class="f-pill">Community Events</span>
+            <span class="f-pill">School Fundraisers</span>
+            <span class="f-pill">Holiday Pop-Ups</span>
+          </div>
+          <h3 class="f-services_heading">CORPORATE MORNINGS</h3>
+          <div class="f-pills">
+            <span class="f-pill">Office Coffee Bar</span>
+            <span class="f-pill">Employee Appreciation</span>
+            <span class="f-pill">Client Events</span>
+          </div>
+          <h3 class="f-services_heading">PRIVATE EVENTS</h3>
+          <div class="f-pills">
+            <span class="f-pill">Weddings</span>
+            <span class="f-pill">Birthdays</span>
+            <span class="f-pill">Bridal Showers</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         5. SEASONAL — Horizontal scroll (Foudre "Projets" section)
+         Full background color change. Bold text left. Cards scroll right.
+         ═══════════════════════════════════════ -->
+    <section class="f-projects" id="drinks" data-color="#B8860B" data-label="MENU">
+      <div class="f-projects_pin" id="projectsPin">
+        <div class="f-projects_left">
+          <h2 class="f-bigText -light">SEASONAL<br/><em>FAVORITES.</em></h2>
+          <p class="f-projects_sub">House-made syrups. Seasonal menus. Crafted with love.</p>
+          <a href="/menu.html" class="a-btn -outline -light" style="margin-top:var(--sp-6)">Full Menu <svg class="icon"><use href="#icon-arrow-right"/></svg></a>
+        </div>
+        <div class="f-projects_track" id="drinksTrack">
+          <div class="f-projects_card">
+            <div class="f-projects_cardImg"><img src="/images/spring-menu.jpg" alt="Spring Specialty Menu" loading="lazy"/></div>
+            <div class="f-projects_cardBody"><h3>Blueberry Maple</h3><span>Spring 2026</span></div>
+          </div>
+          <div class="f-projects_card">
+            <div class="f-projects_cardImg"><img src="/images/customer-matcha.jpg" alt="Matcha Latte" loading="lazy"/></div>
+            <div class="f-projects_cardBody"><h3>Matcha Latte</h3><span>Fan Favorite</span></div>
+          </div>
+          <div class="f-projects_card">
+            <div class="f-projects_cardImg"><img src="/images/pot-of-gold.jpg" alt="Pot of Gold Refresher" loading="lazy"/></div>
+            <div class="f-projects_cardBody"><h3>Pot of Gold</h3><span>Limited Edition</span></div>
+          </div>
+          <div class="f-projects_card">
+            <div class="f-projects_cardImg"><img src="/images/brownie-latte-tremble.jpg" alt="Brownie Batter Latte" loading="lazy"/></div>
+            <div class="f-projects_cardBody"><h3>Brownie Batter</h3><span>Best Seller</span></div>
+          </div>
+          <div class="f-projects_card">
+            <div class="f-projects_cardImg"><img src="/images/creme-brulee-salon.jpg" alt="Crème Brûlée Latte" loading="lazy"/></div>
+            <div class="f-projects_cardBody"><h3>Crème Brûlée</h3><span>Year Round</span></div>
+          </div>
+          <div class="f-projects_card -cta">
+            <h3>MORE<br/>DRINKS?</h3>
+            <a href="/menu.html" class="a-btn -primary">View Full Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         6. PROCESS — Stacking cards (Foudre "Méthodo" section)
+         Animated card stack revealing steps on scroll.
+         ═══════════════════════════════════════ -->
+    <section class="f-process" id="process" data-color="#FAF7F2" data-label="PROCESS">
+      <div class="f-process_layout">
+        <div class="f-process_left">
+          <h2 class="f-bigText">HOW IT<br/><em>WORKS.</em></h2>
+        </div>
+        <div class="f-process_stack" id="processStack">
+          <div class="f-process_card" style="--accent:#E8A0BF">
+            <span class="f-process_num">01</span>
+            <h3>Tell Us About Your Event</h3>
+            <p>Fill out our booking form with your event type, date, guest count, and any special requests.</p>
+          </div>
+          <div class="f-process_card" style="--accent:#D4A937">
+            <span class="f-process_num">02</span>
+            <h3>We Design Your Menu</h3>
+            <p>We'll curate a custom or seasonal drink menu tailored to your event's vibe and theme.</p>
+          </div>
+          <div class="f-process_card" style="--accent:#6B8E72">
+            <span class="f-process_num">03</span>
+            <h3>We Show Up & Brew</h3>
+            <p>Full trailer setup, professional barista service, house-made syrups. We handle everything — you just enjoy.</p>
+          </div>
+          <div class="f-process_card" style="--accent:#3C2415">
+            <span class="f-process_num">04</span>
+            <h3>Community Impact</h3>
+            <p>Every event supports our mission to give back. From fundraisers to local partnerships, coffee with purpose.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         7. COMMUNITY — Gallery (Foudre project showcase feel)
+         ═══════════════════════════════════════ -->
+    <section class="f-community" id="community" data-color="#FAF7F2" data-label="COMMUNITY">
+      <div class="f-threeCol" style="margin-bottom:var(--sp-10)">
+        <div class="f-threeCol_left">
+          <div class="f-emojis">❤️ 🫶 🎉</div>
+          <h2 class="f-bigText">WE<br/>BRING THEM<br/><em>TOGETHER.</em></h2>
+        </div>
+        <div class="f-threeCol_center">
+          <div class="f-tiltImg"><img src="/images/blood-bank-coffee.jpg" alt="Two Friends Coffee at Blood Bank of Delmarva — bringing the energy and the coffee" loading="lazy"/></div>
+        </div>
+        <div class="f-threeCol_right">
+          <p class="f-about_desc"><strong>"Moments like these show how powerful community can be in bringing people together to save lives."</strong></p>
+          <p class="f-about_desc">Brittany was a regular customer who stopped by to donate for the very first time after seeing we'd be there. Rebecca made her sixth lifetime donation and inspired her friend Elizabeth to give for the very first time.</p>
+        </div>
+      </div>
+      <div class="f-community_grid">
+        <div class="f-community_item"><img src="/images/golden-poppy-birthday.jpg" alt="Two Friends Coffee celebrating Golden Poppy's 4th birthday" loading="lazy"/><p>Golden Poppy Birthday 🩷</p></div>
+        <div class="f-community_item"><img src="/images/best-of-delaware-nom.jpg" alt="Best of Delaware" loading="lazy"/><p>Best of Delaware Nominee</p></div>
+        <div class="f-community_item"><img src="/images/cut-for-cause-event.jpg" alt="Cut for a Cause — $23,000 raised in one day" loading="lazy"/><p>$23K for Bree Strong 🧡</p></div>
+        <div class="f-community_item"><img src="/images/garman-popup.jpg" alt="Garman Group" loading="lazy"/><p>Garman Group Pop-Up</p></div>
+        <div class="f-community_item"><img src="/images/nest-play-event.jpg" alt="Nest Play Cafe" loading="lazy"/><p>The Nest Play Café</p></div>
+        <div class="f-community_item"><img src="/images/holy-cross-event.jpg" alt="Holy Cross School" loading="lazy"/><p>Holy Cross School</p></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         8. CTA — Book Us
+         ═══════════════════════════════════════ -->
+    <section class="f-cta" id="cta" data-color="#C6A67B">
+      <div class="f-cta_inner">
+        <h2 class="f-bigText">LET'S<br/><em>BREW.</em></h2>
+        <p style="color: var(--c-espresso);">Ready to bring the vibes to your next event? Pop-ups, weddings, corporate mornings — we do it all.</p>
+        <a href="/book.html" class="a-btn -gold">Book Us <svg class="icon"><use href="#icon-arrow-right"/></svg></a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         9. FOOTER — Massive brand text (Foudre style)
+         ═══════════════════════════════════════ -->
+    <footer class="f-footer" id="footer">
+      <div class="f-footer_media"><img src="/images/two-friends-founders.jpg" alt="Kady & Kerry — here's to many more lattes, laughs, and dreams turned into reality" loading="lazy"/></div>
+      <div class="f-footer_brand">TWO FRIENDS COFFEE CO.</div>
+      <div class="f-footer_bottom">
+        <div class="f-footer_left">
+          <p>&copy; 2026 Two Friends Coffee Co, LLC.</p>
+          <div class="f-footer_social"><a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank"><svg class="icon"><use href="#icon-instagram"/></svg></a></div>
+        </div>
+        <div class="f-footer_links">
+          <a href="/">Home</a>
+          <a href="/menu.html">Menu</a>
+          <a href="/about.html">About</a>
+          <a href="/book.html">Book Us</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

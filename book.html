@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Us — Two Friends Coffee Co</title>
+  <meta name="description" content="Book Two Friends Coffee Co for your next event. Pop-ups, weddings, corporate mornings, fundraisers — we bring the vibes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-coffee-cup" viewBox="0 0 64 64"><path d="M12 20h32v4a20 20 0 01-20 20h-0a20 20 0 01-20-20v-4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M44 24h6a6 6 0 010 12h-6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 8c0-4 4-4 4 0s4 4 4 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M28 6c0-4 4-4 4 0s4 4 4 0" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/><line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2"/><line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  </svg>
+
+  <header class="o-header" id="header">
+    <button class="o-header_menuBtn" id="menuBtn" aria-label="Open menu"><svg class="icon -open"><use href="#icon-menu"/></svg><svg class="icon -close"><use href="#icon-close"/></svg></button>
+    <a href="/" class="o-header_logo"><svg class="icon"><use href="#icon-coffee-cup"/></svg><span>Two Friends</span></a>
+    <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="o-header_igBtn" aria-label="Instagram"><svg class="icon"><use href="#icon-instagram"/></svg></a>
+  </header>
+
+  <nav class="o-menu" id="menu"><div class="o-menu_overlay" id="menuOverlay"></div><div class="o-menu_panel"><div class="o-menu_inner">
+    <div>
+      <ul class="o-menu_list">
+        <li><a href="/">Home</a></li><li><a href="/menu.html">Menu</a></li><li><a href="/about.html">About</a></li><li><a href="/book.html">Book Us</a></li><li><a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank">Instagram</a></li>
+      </ul>
+      <div class="o-menu_footer"><p>Delaware &amp; beyond ☕</p></div>
+    </div>
+    <div class="o-menu_right">
+      <h3>Follow The <em>Journey</em></h3>
+      <p>House-made syrups, seasonal menus, and community love.</p>
+      <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="a-btn -gold">@twofriendscoffee_co</a>
+    </div>
+  </div></div></nav>
+
+  <main>
+    <section class="s-pageHero"><div><h1>Book <em>Us</em></h1><p>Pop-ups, private events, corporate mornings — let's make it happen.</p></div></section>
+
+    <section class="s-book">
+      <div class="s-book_layout">
+        <div class="s-book_main">
+          <!-- Steps Nav -->
+          <div class="s-book_steps" id="bookSteps">
+            <div class="s-book_step is-active" data-step="1">1. Event Details</div>
+            <div class="s-book_step" data-step="2">2. Your Info</div>
+            <div class="s-book_step" data-step="3">3. Confirm</div>
+          </div>
+
+          <!-- Step 1: Event Details -->
+          <form class="s-book_form is-active" id="step1" data-step="1">
+            <div class="s-book_field">
+              <label class="s-book_label" for="eventType">Event Type</label>
+              <select class="s-book_select" id="eventType" required>
+                <option value="">Select event type...</option>
+                <option value="popup">Pop-Up / Market</option>
+                <option value="private">Private Event</option>
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate Morning</option>
+                <option value="fundraiser">Fundraiser</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="s-book_field">
+              <label class="s-book_label" for="eventDate">Preferred Date</label>
+              <input class="s-book_input" type="date" id="eventDate" required/>
+            </div>
+            <div class="s-book_field">
+              <label class="s-book_label" for="guestCount">Estimated Guest Count</label>
+              <select class="s-book_select" id="guestCount" required>
+                <option value="">Select range...</option>
+                <option value="1-25">1–25 guests</option>
+                <option value="26-50">26–50 guests</option>
+                <option value="51-100">51–100 guests</option>
+                <option value="100+">100+ guests</option>
+              </select>
+            </div>
+            <div class="s-book_field">
+              <label class="s-book_label" for="location">Event Location</label>
+              <input class="s-book_input" type="text" id="location" placeholder="City, venue, or address" required/>
+            </div>
+            <div class="s-book_field">
+              <label class="s-book_label" for="details">Additional Details</label>
+              <textarea class="s-book_textarea" id="details" placeholder="Tell us about your event vibe, theme, or any special requests..."></textarea>
+            </div>
+            <div class="s-book_actions">
+              <button type="button" class="a-btn -primary" onclick="goStep(2)">Next Step <svg class="icon"><use href="#icon-arrow-right"/></svg></button>
+            </div>
+          </form>
+
+          <!-- Step 2: Contact Info -->
+          <form class="s-book_form" id="step2" data-step="2">
+            <div class="s-book_field">
+              <label class="s-book_label" for="fullName">Full Name</label>
+              <input class="s-book_input" type="text" id="fullName" placeholder="Your name" required/>
+            </div>
+            <div class="s-book_field">
+              <label class="s-book_label" for="email">Email Address</label>
+              <input class="s-book_input" type="email" id="email" placeholder="you@example.com" required/>
+            </div>
+            <div class="s-book_field">
+              <label class="s-book_label" for="phone">Phone Number</label>
+              <input class="s-book_input" type="tel" id="phone" placeholder="(302) 555-0000"/>
+            </div>
+            <div class="s-book_actions">
+              <button type="button" class="a-btn -outline" onclick="goStep(1)">Back</button>
+              <button type="button" class="a-btn -primary" onclick="goStep(3)">Review <svg class="icon"><use href="#icon-arrow-right"/></svg></button>
+            </div>
+          </form>
+
+          <!-- Step 3: Review -->
+          <div class="s-book_form" id="step3" data-step="3">
+            <dl class="s-book_review" id="reviewSummary"></dl>
+            <div class="s-book_actions" style="margin-top:var(--sp-6)">
+              <button type="button" class="a-btn -outline" onclick="goStep(2)">Back</button>
+              <button type="button" class="a-btn -gold" onclick="submitBooking()">Submit Request ☕</button>
+            </div>
+          </div>
+
+          <!-- Success -->
+          <div class="s-book_form" id="stepSuccess" data-step="success">
+            <div class="s-book_success">
+              <h2>Request Sent! ☕</h2>
+              <p>We'll get back to you within 24 hours. In the meantime, follow us on Instagram for the latest pop-up schedule.</p>
+              <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="a-btn -primary">Follow Us on Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="s-book_sidebar">
+          <div class="s-book_sideImg"><img src="/images/cut-for-cause.jpg" alt="Two Friends Coffee at community event" loading="lazy"/></div>
+          <div class="s-book_sideInfo">
+            <h3>What to Expect</h3>
+            <ul>
+              <li>Full coffee trailer setup</li>
+              <li>Professional barista service</li>
+              <li>Custom or seasonal menu</li>
+              <li>Branded cups available</li>
+              <li>Setup & cleanup included</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="o-footer">
+      <div class="o-footer_top">
+        <div class="o-footer_brand"><svg class="icon"><use href="#icon-coffee-cup"/></svg><span>Two Friends Coffee Co</span></div>
+        <div class="o-footer_links"><a href="/">Home</a><a href="/menu.html">Menu</a><a href="/about.html">About</a><a href="/book.html">Book Us</a></div>
+        <div class="o-footer_social"><a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank"><svg class="icon"><use href="#icon-instagram"/></svg></a></div>
+      </div>
+      <div class="o-footer_bottom"><p>&copy; 2026 Two Friends Coffee Co, LLC.</p></div>
+    </footer>
+  </main>
+  <script type="module" src="/src/pages.js"></script>
+</body>
+</html>

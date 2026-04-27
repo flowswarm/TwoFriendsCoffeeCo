@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Two Friends Coffee Co</title>
+  <meta name="description" content="House-made syrups, seasonal specials, classic lattes, refreshers. See what's brewing at Two Friends Coffee Co." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-coffee-cup" viewBox="0 0 64 64"><path d="M12 20h32v4a20 20 0 01-20 20h-0a20 20 0 01-20-20v-4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M44 24h6a6 6 0 010 12h-6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 8c0-4 4-4 4 0s4 4 4 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M28 6c0-4 4-4 4 0s4 4 4 0" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/><line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2"/><line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  </svg>
+
+  <header class="o-header" id="header">
+    <button class="o-header_menuBtn" id="menuBtn" aria-label="Open menu"><svg class="icon -open"><use href="#icon-menu"/></svg><svg class="icon -close"><use href="#icon-close"/></svg></button>
+    <a href="/" class="o-header_logo"><svg class="icon"><use href="#icon-coffee-cup"/></svg><span>Two Friends</span></a>
+    <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="o-header_igBtn" aria-label="Instagram"><svg class="icon"><use href="#icon-instagram"/></svg></a>
+  </header>
+
+  <nav class="o-menu" id="menu">
+    <div class="o-menu_overlay" id="menuOverlay"></div>
+    <div class="o-menu_panel"><div class="o-menu_inner">
+      <div>
+        <ul class="o-menu_list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/book.html">Book Us</a></li>
+          <li><a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank">Instagram</a></li>
+        </ul>
+        <div class="o-menu_footer"><p>Delaware &amp; beyond ☕</p></div>
+      </div>
+      <div class="o-menu_right">
+        <h3>Follow The <em>Journey</em></h3>
+        <p>House-made syrups, seasonal menus, and community love.</p>
+        <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="a-btn -gold">@twofriendscoffee_co</a>
+      </div>
+    </div></div>
+  </nav>
+
+  <main>
+    <section class="s-pageHero">
+      <div>
+        <h1>Our <em>Menu</em></h1>
+        <p>House-made syrups, seasonal specials, and fan favorites. What's your order?</p>
+      </div>
+    </section>
+
+    <!-- Spring Specials -->
+    <section class="s-menuSection" data-color="#F5E6B8">
+      <div class="s-menuSection_header js-reveal"><h2>Spring <em>Specials</em></h2><p>Limited edition — available while the season lasts</p></div>
+      <div class="s-menuGrid">
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/spring-menu-official.jpg" alt="Spring menu board" loading="lazy"/></div><div class="s-menuCard_body"><h3>Papayaberry Tea Lemonade</h3><p>Sweet papaya and tart berry tea mixed with cold pressed lemonade topped with sparkling water</p><span class="s-menuCard_tag">Spring 2026</span></div></div>
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/spring-menu.jpg" alt="Spring refreshers menu" loading="lazy"/></div><div class="s-menuCard_body"><h3>Dragonfruit Tangerine</h3><p>Housemade dragonfruit syrup, bright cold pressed tangerine juice topped with sparkling water</p><span class="s-menuCard_tag">Spring 2026</span></div></div>
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/customer-matcha.jpg" alt="Blueberry Maple Matcha" loading="lazy"/></div><div class="s-menuCard_body"><h3>Blueberry Maple Matcha</h3><p>"The customer service was 10 out of 10. The BlueBerry Maple Syrup Matcha was soooooo good!"</p><span class="s-menuCard_tag">Fan Favorite</span></div></div>
+      </div>
+    </section>
+
+    <!-- Classics -->
+    <section class="s-menuSection" data-color="#FFF8F0">
+      <div class="s-menuSection_header js-reveal"><h2>Classic <em>Signatures</em></h2><p>Year-round favorites made with love</p></div>
+      <div class="s-menuGrid">
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/brownie-latte-tremble.jpg" alt="Brownie Batter Latte" loading="lazy"/></div><div class="s-menuCard_body"><h3>Brownie Batter Latte</h3><p>Rich, chocolatey, and indulgent — like dessert in a cup. Hot or iced.</p><span class="s-menuCard_tag">Best Seller</span></div></div>
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/creme-brulee-salon.jpg" alt="Crème Brûlée Latte" loading="lazy"/></div><div class="s-menuCard_body"><h3>Crème Brûlée Latte</h3><p>Caramelized sweetness in every sip — as good as it sounds</p><span class="s-menuCard_tag">Year Round</span></div></div>
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/house-made-syrups.jpg" alt="House-made syrups" loading="lazy"/></div><div class="s-menuCard_body"><h3>House-Made Syrups</h3><p>We make our syrups in-house using quality ingredients, lots of love, and just a little taste-testing</p><span class="s-menuCard_tag">Our Secret</span></div></div>
+      </div>
+    </section>
+
+    <!-- Refreshers -->
+    <section class="s-menuSection" data-color="#F5E6B8">
+      <div class="s-menuSection_header js-reveal"><h2><em>Refreshers</em></h2><p>Cool, colorful, and perfect for any season</p></div>
+      <div class="s-menuGrid">
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/pot-of-gold.jpg" alt="Pot of Gold Refresher" loading="lazy"/></div><div class="s-menuCard_body"><h3>Pot of Gold</h3><p>Sweet, citrusy, and golden — our limited edition crowd-pleaser</p><span class="s-menuCard_tag">Limited Edition</span></div></div>
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/valentines-menu-special.jpg" alt="Valentine's specials" loading="lazy"/></div><div class="s-menuCard_body"><h3>Valentine's Specials</h3><p>Sweet, dreamy, and totally crush-worthy seasonal drinks</p><span class="s-menuCard_tag">Seasonal</span></div></div>
+        <div class="s-menuCard js-reveal"><div class="s-menuCard_img"><img src="/images/spring-menu-2.jpg" alt="Spring refreshers" loading="lazy"/></div><div class="s-menuCard_body"><h3>Spring Refreshers</h3><p>Fresh fruity flavors to brighten your day</p><span class="s-menuCard_tag">Spring 2026</span></div></div>
+      </div>
+    </section>
+
+    <footer class="o-footer">
+      <div class="o-footer_top">
+        <div class="o-footer_brand"><svg class="icon"><use href="#icon-coffee-cup"/></svg><span>Two Friends Coffee Co</span></div>
+        <div class="o-footer_links"><a href="/">Home</a><a href="/menu.html">Menu</a><a href="/about.html">About</a><a href="/book.html">Book Us</a></div>
+        <div class="o-footer_social"><a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank"><svg class="icon"><use href="#icon-instagram"/></svg></a></div>
+      </div>
+      <div class="o-footer_bottom"><p>&copy; 2026 Two Friends Coffee Co, LLC.</p></div>
+    </footer>
+  </main>
+  <script type="module" src="/src/pages.js"></script>
+</body>
+</html>

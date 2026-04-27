@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Two Friends Coffee Co</title>
+  <meta name="description" content="Two nurses, two BFFs, one dream. Learn how Two Friends Coffee Co went from an idea to Delaware's favorite mobile coffee trailer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-coffee-cup" viewBox="0 0 64 64"><path d="M12 20h32v4a20 20 0 01-20 20h-0a20 20 0 01-20-20v-4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M44 24h6a6 6 0 010 12h-6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 8c0-4 4-4 4 0s4 4 4 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M28 6c0-4 4-4 4 0s4 4 4 0" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/><line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2"/><line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><polyline points="14,6 20,12 14,18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  </svg>
+
+  <header class="o-header" id="header">
+    <button class="o-header_menuBtn" id="menuBtn" aria-label="Open menu"><svg class="icon -open"><use href="#icon-menu"/></svg><svg class="icon -close"><use href="#icon-close"/></svg></button>
+    <a href="/" class="o-header_logo"><svg class="icon"><use href="#icon-coffee-cup"/></svg><span>Two Friends</span></a>
+    <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="o-header_igBtn" aria-label="Instagram"><svg class="icon"><use href="#icon-instagram"/></svg></a>
+  </header>
+
+  <nav class="o-menu" id="menu"><div class="o-menu_overlay" id="menuOverlay"></div><div class="o-menu_panel"><div class="o-menu_inner">
+    <div>
+      <ul class="o-menu_list">
+        <li><a href="/">Home</a></li><li><a href="/menu.html">Menu</a></li><li><a href="/about.html">About</a></li><li><a href="/book.html">Book Us</a></li><li><a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank">Instagram</a></li>
+      </ul>
+      <div class="o-menu_footer"><p>Delaware &amp; beyond ☕</p></div>
+    </div>
+    <div class="o-menu_right">
+      <h3>Follow The <em>Journey</em></h3>
+      <p>House-made syrups, seasonal menus, and community love.</p>
+      <a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank" class="a-btn -gold">@twofriendscoffee_co</a>
+    </div>
+  </div></div></nav>
+
+  <main>
+    <section class="s-pageHero"><div><h1>Our <em>Story</em></h1><p>Two nurses. Two BFFs. One dream and a whole lot of coffee.</p></div></section>
+
+    <!-- Origin Story -->
+    <section class="s-story">
+      <div class="s-story_split js-reveal">
+        <div class="s-story_imgWrap" style="position:relative">
+          <video id="howItStartedVideo" src="/videos/how-it-started.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg)"></video>
+          <button id="soundToggle" aria-label="Toggle sound" style="position:absolute;bottom:12px;right:12px;z-index:10;width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);background:rgba(0,0,0,0.55);color:#fff;font-size:1.2rem;cursor:pointer;backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .2s">🔇</button>
+          <script>
+            (function(){
+              var vid = document.getElementById('howItStartedVideo');
+              var btn = document.getElementById('soundToggle');
+              btn.addEventListener('click', function(){
+                if(vid.muted){
+                  vid.muted = false;
+                  btn.textContent = '🔊';
+                  btn.style.background = 'rgba(0,0,0,0.7)';
+                } else {
+                  vid.muted = true;
+                  btn.textContent = '🔇';
+                  btn.style.background = 'rgba(0,0,0,0.55)';
+                }
+              });
+            })();
+          </script>
+        </div>
+        <div class="s-story_text">
+          <h3>How It Started</h3>
+          <p>Episode 122 of <em>Life On The Ave</em> — Kerry and Kady share their journey from nursing to brewing, how they drove the trailer home from New York, and what it means to build something together.</p>
+          <p>"We were simply dreaming about what it might look like to build something together." The rest is Delaware coffee history.</p>
+        </div>
+      </div>
+      <div class="s-story_split js-reveal">
+        <div class="s-story_imgWrap"><img src="/images/busiest-day-close.jpg" alt="Busiest day at Two Friends Coffee" loading="lazy"/></div>
+        <div class="s-story_text">
+          <h3>The Busiest Day</h3>
+          <p>"We are so incredibly grateful for every single person who showed up, waited in line, supported us, and cheered us on."</p>
+          <p>They're constantly putting everything back into the business — saving for a bigger espresso machine, improving flow, and serving the community that built them.</p>
+        </div>
+      </div>
+      <div class="s-story_split js-reveal">
+        <div class="s-story_imgWrap"><img src="/images/corporate-morning.jpg" alt="PJ Fitzpatrick corporate morning" loading="lazy"/></div>
+        <div class="s-story_text">
+          <h3>Growing Together</h3>
+          <p>"Love giving back to a business who pours (coffee) into their employees!" From recurring corporate mornings at PJ Fitzpatrick to school events and fitness pop-ups, they've built real partnerships across Delaware.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestones -->
+    <section class="s-milestones" data-color="#F5E6B8">
+      <h2 class="tx-xl js-reveal">By The <em>Numbers</em></h2>
+      <div class="s-milestones_grid">
+        <div class="s-milestones_item js-reveal"><div class="s-milestones_num">1,000+</div><div class="s-milestones_label">Instagram Followers</div></div>
+        <div class="s-milestones_item js-reveal"><div class="s-milestones_num">$23K</div><div class="s-milestones_label">Raised for Community</div></div>
+        <div class="s-milestones_item js-reveal"><div class="s-milestones_num">2x</div><div class="s-milestones_label">Best of Delaware Nominee</div></div>
+        <div class="s-milestones_item js-reveal"><div class="s-milestones_num">50+</div><div class="s-milestones_label">Events Served</div></div>
+      </div>
+    </section>
+
+    <!-- Community Gallery -->
+    <section class="s-community" data-color="#FFF8F0" style="padding-bottom:var(--sp-section)">
+      <h2 class="tx-xl tx-center js-reveal">Community <em>Moments</em></h2>
+      <div class="s-community_grid">
+        <div class="s-community_item js-reveal-scale"><img src="/images/blood-bank-return.jpg" alt="Blood Bank return visit" loading="lazy"/><p>Blood Bank of Delmarva</p></div>
+        <div class="s-community_item js-reveal-scale"><img src="/images/galentines-pilates.jpg" alt="Galentine's event" loading="lazy"/><p>50 ladies at Galentine's Sculpt</p></div>
+        <div class="s-community_item js-reveal-scale"><img src="/images/best-of-delaware-nom.jpg" alt="Best of Delaware" loading="lazy"/><p>Best of Delaware Nominee</p></div>
+        <div class="s-community_item js-reveal-scale"><img src="/images/do-more-24-event.jpg" alt="Do More 24 Delaware" loading="lazy"/><p>Do More 24 in Lewes</p></div>
+        <div class="s-community_item js-reveal-scale"><img src="/images/garman-popup.jpg" alt="Garman Group pop-up" loading="lazy"/><p>Garman Group Pop-Up</p></div>
+        <div class="s-community_item js-reveal-scale"><img src="/images/nest-play-event.jpg" alt="Nest Play Cafe" loading="lazy"/><p>The Nest Play Café</p></div>
+      </div>
+    </section>
+
+    <footer class="o-footer">
+      <div class="o-footer_top">
+        <div class="o-footer_brand"><svg class="icon"><use href="#icon-coffee-cup"/></svg><span>Two Friends Coffee Co</span></div>
+        <div class="o-footer_links"><a href="/">Home</a><a href="/menu.html">Menu</a><a href="/about.html">About</a><a href="/book.html">Book Us</a></div>
+        <div class="o-footer_social"><a href="https://www.instagram.com/twofriendscoffee_co/" target="_blank"><svg class="icon"><use href="#icon-instagram"/></svg></a></div>
+      </div>
+      <div class="o-footer_bottom"><p>&copy; 2026 Two Friends Coffee Co, LLC.</p></div>
+    </footer>
+  </main>
+  <script type="module" src="/src/pages.js"></script>
+</body>
+</html>

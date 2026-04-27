@@ -1,0 +1,203 @@
+/* ═══════════════════════════════════════════
+   ANIMATIONS — Keyframes & Scroll Utilities
+   Premium Redesign v2
+   ═══════════════════════════════════════════ */
+
+/* ── Loader ── */
+@keyframes loaderFadeOut {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+@keyframes loaderWordUp {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}
+@keyframes loaderSteamDraw {
+  from { stroke-dashoffset: 500; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes counterPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+@keyframes loaderScale {
+  to { transform: scale(1.2); filter: blur(20px); opacity: 0; }
+}
+
+/* ── Cursor ── */
+@keyframes cursorPulse {
+  0%   { transform: translate(-50%,-50%) scale(1); }
+  50%  { transform: translate(-50%,-50%) scale(1.15); }
+  100% { transform: translate(-50%,-50%) scale(1); }
+}
+
+/* ── Marquee ── */
+@keyframes marqueeLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marqueeRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* ── Float ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%      { transform: translateY(-8px) rotate(0.5deg); }
+  66%      { transform: translateY(4px) rotate(-0.5deg); }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+/* ── Shimmer (gold accent pulse) ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Breathe (subtle section pulse) ── */
+@keyframes breathe {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 0.8; }
+}
+
+/* ── Gradient shift for CTA ── */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Button pulse ── */
+@keyframes btnPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(184,134,11,0.4); }
+  70%  { box-shadow: 0 0 0 14px rgba(184,134,11,0); }
+  100% { box-shadow: 0 0 0 0 rgba(184,134,11,0); }
+}
+
+/* ── Reveal Masks ── */
+@keyframes clipRevealUp {
+  from { clip-path: inset(100% 0 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+@keyframes clipRevealLeft {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+@keyframes scaleIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { transform: translateY(60px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Cinematic blur-fade ── */
+@keyframes blurFadeIn {
+  from { opacity: 0; filter: blur(12px); transform: translateY(30px); }
+  to   { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+@keyframes blurScaleIn {
+  from { opacity: 0; filter: blur(8px); transform: scale(0.92); }
+  to   { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+
+/* ── Underline slide ── */
+@keyframes underlineSlide {
+  from { transform: scaleX(0); transform-origin: left; }
+  to   { transform: scaleX(1); transform-origin: left; }
+}
+
+/* ══════════════════════════════════════════════
+   UTILITY CLASSES FOR SCROLL REVEALS
+   ═════════════════════════════════════════════ */
+
+/* Standard fade-up with blur */
+.js-reveal {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(40px);
+  transition: opacity 0.9s var(--ease-smooth),
+              filter 0.9s var(--ease-smooth),
+              transform 0.9s var(--ease-smooth);
+}
+.js-reveal.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Scale-in with blur */
+.js-reveal-scale {
+  opacity: 0;
+  filter: blur(4px);
+  transform: scale(0.88);
+  transition: opacity 0.9s var(--ease-smooth),
+              filter 0.9s var(--ease-smooth),
+              transform 0.9s var(--ease-smooth);
+}
+.js-reveal-scale.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+/* Character animation */
+.js-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+/* Word mask */
+.js-word {
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Line mask */
+.js-line {
+  overflow: hidden;
+}
+
+/* Image reveal with clip-path */
+.js-img-reveal {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.3s var(--ease-smooth);
+}
+.js-img-reveal.is-visible {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Stagger group — children animate in sequence */
+.js-stagger > * {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-smooth),
+              filter 0.7s var(--ease-smooth),
+              transform 0.7s var(--ease-smooth);
+}
+.js-stagger.is-visible > * {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+.js-stagger.is-visible > *:nth-child(1) { transition-delay: 0s; }
+.js-stagger.is-visible > *:nth-child(2) { transition-delay: 0.08s; }
+.js-stagger.is-visible > *:nth-child(3) { transition-delay: 0.16s; }
+.js-stagger.is-visible > *:nth-child(4) { transition-delay: 0.24s; }
+.js-stagger.is-visible > *:nth-child(5) { transition-delay: 0.32s; }
+.js-stagger.is-visible > *:nth-child(6) { transition-delay: 0.4s; }
+
+/* Parallax utility */
+.js-parallax {
+  will-change: transform;
+}
