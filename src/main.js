@@ -148,6 +148,12 @@ function initSectionLabel() {
 function initCaseCard() {
   const card = document.getElementById('caseCard');
   if (!card) return;
+  const closeBtn = document.getElementById('caseCardClose');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      card.classList.add('is-dismissed');
+    });
+  }
   ScrollTrigger.create({ trigger: '#manifesto', start: 'top 90%',
     onEnter: () => card.classList.add('is-visible'),
     onLeaveBack: () => card.classList.remove('is-visible'),
